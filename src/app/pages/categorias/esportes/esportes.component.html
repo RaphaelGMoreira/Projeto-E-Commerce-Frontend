@@ -1,0 +1,30 @@
+<h2>Esportes</h2>
+<div class="form-group row">
+    <label class="col-sm-2 col-form-label">Filter:</label>
+    <div class="col-sm-10">
+        <input [(ngModel)]="filter" class="form-control">
+    </div>
+</div>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>Nome</th>
+            <th>Preço</th>
+            <th>Plataforma</th>
+            <th>Categoria</th>
+        </tr>
+    </thead>
+
+
+<tbody>
+    <tr *ngFor="let esportes of filteredAcaos">
+    <td><img [src]="esportes.imageUrl" width="200" height="150"></td>
+    <td>{{ esportes.nome }}</td>
+    <td>{{ esportes.preco }}</td>
+    <td>{{ esportes.plataforma }}</td>
+    <td>{{ esportes.categoria }}</td>
+</tr>
+</tbody>
+</table>

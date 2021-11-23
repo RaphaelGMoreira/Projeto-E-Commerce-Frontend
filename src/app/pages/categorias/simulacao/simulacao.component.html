@@ -1,0 +1,30 @@
+<h2>Simulação</h2>
+<div class="form-group row">
+    <label class="col-sm-2 col-form-label">Filter:</label>
+    <div class="col-sm-10">
+        <input [(ngModel)]="filter" class="form-control">
+    </div>
+</div>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>Nome</th>
+            <th>Preço</th>
+            <th>Plataforma</th>
+            <th>Categoria</th>
+        </tr>
+    </thead>
+
+
+<tbody>
+    <tr *ngFor="let simulacao of filteredAcaos">
+    <td><img [src]="simulacao.imageUrl" width="200" height="150"></td>
+    <td>{{ simulacao.nome }}</td>
+    <td>{{ simulacao.preco }}</td>
+    <td>{{ simulacao.plataforma }}</td>
+    <td>{{ simulacao.categoria }}</td>
+</tr>
+</tbody>
+</table>

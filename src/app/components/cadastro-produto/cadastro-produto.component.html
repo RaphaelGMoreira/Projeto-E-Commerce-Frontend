@@ -1,0 +1,53 @@
+
+<div class="container">
+    <mat-tab-group mat-align-tabs="start" style="padding-top: 40px; padding-left: 2%; padding-right: 2%;"></mat-tab-group>
+    <form (ngSubmit)="salvar()" [formGroup]="form"><!--<img src="assets/images/gamer.jpg">-->
+        <div class="box">
+        <div class="container"><h3>Cadastro Produto</h3></div>
+        <table>
+            <thead>
+                <tr>
+                    <td>Nome</td>
+                    <td><input matInput placeholder="Nome Produto" type="text" name="txtNome" id="txtNome" formControlName="nomeFormControl"></td>
+                </tr>
+                <tr>
+                    <td>Preço</td>
+                    <td><input matInput class="preco" placeholder="R$ 0,00" type="number" name="txtPreco" id="txtPreco" formControlName="precoFormControl"></td>
+                </tr>
+                <tr>
+                    <td>Categoria</td>
+                    <td>
+                        <select class="categoria" name="ddlCategoria" id="ddlCategoria" formControlName="categoriaFormControl">
+                            <option value="0">Ação</option>
+                            <option value="1">Aventura</option>
+                            <option value="2">RPG</option>
+                            <option value="3">Simulaçao</option>
+                            <option value="4">Esportes</option>
+                            <option value="5">Estratégia</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Plataforma</td>
+                    <td>
+                        <select class="plataforma" name="ddlPlataforma" id="ddlPlataforma" formControlName="plataformaFormControl">
+                            <option value="0">Xbox</option>
+                            <option value="1">Playstation</option>
+                            <option value="2">Desktop</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <section>
+                        <div class="button-row">
+                          <button input type="submit" value="Salvar" mat-raised-button color="primary">Salvar</button>
+                        </div>
+                      </section>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    </form>
+</div>
+
+

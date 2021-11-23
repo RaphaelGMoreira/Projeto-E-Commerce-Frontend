@@ -1,0 +1,38 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.box {
+    width: 340px;
+    height: 350px;
+    background: rgb(236, 242, 247);
+    }
+
+.preco {
+    text-align: right;
+    width: 100px;
+    }
+
+.categoria{
+    width: 100px;
+
+}
+
+.plataforma{
+    width: 100px;
+}
+
+.button-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+tr{
+    height:35px;
+}

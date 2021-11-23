@@ -1,0 +1,41 @@
+
+<div class="container">
+<form (ngSubmit)="salvar()"[formGroup]="form">
+    <div class="box">
+        <div class="container"><h3>Cadastro Usuario</h3></div>
+        <table>
+            <tr>
+                <td>Nome</td>
+                <td><input matInput placeholder="Joaquim Silva Santos" type="text" name="txtNome" id="txtNome" formControlName="nomeFormControl"></td>
+            </tr>
+            <tr>
+                <td>E-mail</td>
+                <td><input matInput placeholder="pat@example.com" type="email" name="txtEmail" id="txtEmail" formControlName="emailFormControl"></td>
+            </tr>
+            <tr>
+                <td>Senha</td>                           <!--Emplementando o icone de visualisar senha-->
+                <td><input matInput placeholder="Senha" [type]="hide ? 'password' : 'text'" name="txtSenha" id="txtSenha" formControlName="senhaFormControl"></td>
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                  </button>
+            </tr>
+            <tr>
+                <td>CPF</td>
+                <td><input matInput placeholder="Somente Numeros" type="number" name="txtCpf" id="txtCpf" formControlName="cpfFormControl"></td>
+            </tr>
+            <tr>
+                <td>Data Nascimento</td>
+                <td><input type="date" name="txtDataNascimento" id="txtDataNascimento" formControlName="dataNascimentoFormControl"></td>
+            </tr>
+            <tr>
+                <section>
+                    <div class="button-row">
+                      <button input type="submit" value="Salvar" mat-raised-button color="primary">Salvar</button>
+                    </div>
+                  </section>
+            </tr>
+        </table>
+    </div>
+</form>
+</div>
+

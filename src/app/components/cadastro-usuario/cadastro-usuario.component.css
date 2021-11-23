@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 340px;
+    height: 350px;
+    background: rgb(236, 242, 247);
+    }
+
+.button-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    }
+tr{
+    height:35px;
+}

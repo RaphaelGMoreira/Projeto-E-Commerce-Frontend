@@ -1,0 +1,52 @@
+<!--Sidenav na vertical-->
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'side' : 'side'"> 
+    <mat-toolbar color="primary">Menu</mat-toolbar>
+    <mat-nav-list>
+      <!--Link Home com Icone-->
+      <a  mat-list-item href="#"[routerLink]="['/menu']" routerLinkActive="router-link-active"><mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon></a>
+      <!--Link Cadastro Usuario-->
+      <a mat-list-item href="#"[routerLink]="['/cadastro-usuario']" routerLinkActive="router-link-active">Cadastro Usuario</a>
+      <!--Link Cadastro Produto-->
+      <a mat-list-item href="#"[routerLink]="['/cadastro-produto']" routerLinkActive="router-link-active">Cadastro Produto</a>
+      <!--Link acao-->
+      <a mat-list-item href="#"[routerLink]="['/acao']" routerLinkActive="router-link-active">Açao</a>
+      <!--Link Aventura-->
+      <a mat-list-item href="#"[routerLink]="['/aventura']" routerLinkActive="router-link-active">Aventura</a> 
+      <!--Link Corrida-->
+      <a mat-list-item href="#"[routerLink]="['/corrida']" routerLinkActive="router-link-active">Corrida</a>
+      <!--Link Esporte-->
+      <a mat-list-item href="#"[routerLink]="['/esportes']" routerLinkActive="router-link-active">Esporte</a>  
+      <!--Link Estrategia-->
+      <a mat-list-item href="#"[routerLink]="['/estrategia']" routerLinkActive="router-link-active">Estrategia</a> 
+      <!--Link RPG-->
+      <a mat-list-item href="#"[routerLink]="['/rpg']" routerLinkActive="router-link-active">RPG</a> 
+      <!--Link Simulacao-->
+      <a mat-list-item href="#"[routerLink]="['/simulacao']" routerLinkActive="router-link-active">Simulação</a> 
+    </mat-nav-list>
+  </mat-sidenav>
+  <!--Sidenav na horizontal-->
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <!--Button para aparecer o menu quando a tela é pequena!-->
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <!--Nome da Loja-->
+      <span>Gamers Unasp</span>
+    </mat-toolbar>
+    
+    <!-- Add Content Here -->
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+
+
+
